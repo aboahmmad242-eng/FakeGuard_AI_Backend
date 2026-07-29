@@ -14,20 +14,17 @@ device = torch.device(
 )
 
 
-model_path = "../Model/checkpoint-8358"
+model_path = "eleen1999/FakeGuard-AI-BERT-FakeNews-Detector"
 
 
 tokenizer = AutoTokenizer.from_pretrained(
-    model_path,
-    local_files_only=True
+    model_path
 )
 
 
 model = AutoModelForSequenceClassification.from_pretrained(
-    model_path,
-    local_files_only=True
+    model_path
 )
-
 
 model.to(device)
 
